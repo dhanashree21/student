@@ -1,0 +1,96 @@
+<div>
+<form class="myform"  (ngSubmit)="onSubmit(f.value)" #f = "ngForm">    
+  <table class="mytb">    
+<h2>Student Details</h2>
+      <tr>    
+          <td>    
+              <mat-form-field class="demo-full-width">    
+                  <input matInput placeholder="First Name" ngModel name="fname">    
+              </mat-form-field>    
+          </td>    
+          <td>    
+              <mat-form-field class="demo-full-width">    
+                  <input matInput placeholder="Last Name" ngModel name="lname">    
+              </mat-form-field>    
+          </td>    
+      </tr>    
+     <tr>    
+          <td colspan="2">    
+              <mat-form-field class="demo-full-width">    
+                  <textarea matInput placeholder="City" matTextareaAutosize matAutosizeMinRows="2" matAutosizeMaxRows="5" ngModel name="cityname"></textarea>    
+              </mat-form-field>    
+          </td>    
+      </tr>    
+      <tr>
+        
+        
+        <tr>    
+          <td>    
+              <span>Gender</span><br><br>    
+              <mat-radio-group
+  aria-labelledby="example-radio-group-label"
+  class="example-radio-group"
+ >
+  <mat-radio-button class="example-radio-button" ngDefaultControl *ngFor="let gender of genders" ngModel [value]="gender" name="gender">
+    {{gender}}
+  </mat-radio-button>
+</mat-radio-group>  
+          </td>    
+          
+      </tr>    
+      <tr>    
+          <td colspan="2">    
+              <mat-form-field class="demo-full-width">    
+                  <input matInput placeholder="Phone" name="phone" ngModel>    
+              </mat-form-field>    
+          </td>    
+      </tr> 
+
+      <tr>
+        <td>
+          <br>    
+            <mat-form-field>    
+              <mat-select ngModel name="year" placeholder="select year">
+                <mat-option *ngFor="let year of years" [value]="year">
+                  {{year}}
+                </mat-option>
+              </mat-select>    
+            </mat-form-field>    
+        </td>    
+      </tr>
+  
+<tr>
+
+        <td  class="content-center">
+      
+            <button mat-raised-button color ="accent" class="btncls">Submit</button>    
+             
+      
+        </td>    
+    </tr>    
+     
+    
+  </table>    
+</form> 
+
+
+<div class="userdata" *ngIf=submitted>
+<!-- <p>FirstName:{{user.firstname}}</p>
+<p>LastName:{{user.lastname}}</p>
+<p>City:{{user.city}}</p>
+<p>Year:{{user.year}}</p>
+<p>Phone:{{user.phone}}</p>
+<p>Gender:{{user.gender}}</p> -->
+<table class="tbdisp">
+  <tr><td>FirstName:{{user.firstname}}</td>
+  <td>LastName:{{user.lastname}}</td>
+  <td>City:{{user.city}}</td>
+  <td>Year:{{user.year}}</td>
+  <td>Phone:{{user.phone}}</td>
+  <td>Gender:{{user.gender}} </td></tr>
+</table>
+</div>
+
+</div>
+
+

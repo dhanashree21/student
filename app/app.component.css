@@ -1,0 +1,44 @@
+.myform
+{
+    width: 700px;
+    margin: auto;
+    
+}
+.mytb
+{
+    width: 100% - 200px;
+    /* margin: auto; */
+    width: calc(100% - 67px);
+  
+    color: gray;
+    padding: 20px;
+    border: 1px solid gainsboro;
+    /* margin-left: auto; */
+
+}
+.userdata
+{
+    /* width: 700px; */
+    margin: auto;
+    margin-top: 40px;
+}
+.tbdisp
+{
+    border: 1px solid gainsboro;
+    width: calc(100% - 67px);
+    margin: auto;
+}
+.btncls
+{
+    margin-right: 20px;
+    margin-left: 20px;
+}
+.mat-form-field 
+    {
+        display:block;
+    }
+
+    .mat-radio-button
+    {
+        margin-right: 20px;
+    }
